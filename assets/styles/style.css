@@ -1,0 +1,65 @@
+
+@font-face {
+    font-family: "Dita Sweet";
+    src: url("../font/dita-sweet.regular.ttf");
+}
+
+td > input {
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(90deg, #d8c59f 0%, #f3efde 100%);
+}
+
+.header {
+    font-family: 'Dita Sweet';
+    background: linear-gradient(90deg, #cbad7e 0%, #e7d095 100%);
+    border-bottom: 2px solid #c6ab7e;
+    color: #4e3f20;
+}
+
+.scores-view, #list-scored, #preview {
+    background-color: #faf8ef;
+    border: 2px solid #d8c59f;
+}
+
+#preview-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.25rem;
+}
+
+#preview {
+    width: 300px;
+    height: auto;
+    border-radius: 0.25rem;
+    position: fixed;
+}
+
+#contestant-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+#judge-info {
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    background: #faf8ef;
+    border-top: 2px solid #d8c59f;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+#list-scored {
+    width:fit-content;
+}
+
+/* td {
+    text-align: center;
+} */
