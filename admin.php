@@ -47,13 +47,58 @@ if ($_SESSION['user']=="" || $_SESSION['user']['userid']!=1) {
     <div class="container-fluid px-0">
         <div class="header text-center py-4">
             <i class="fa-solid fa-crown fa-2x"></i>
-            <h1>Mr. University of Luzon <?php echo date("Y"); ?></h1>
+            <h2>Mr. & Ms. University of Luzon <?php echo date("Y"); ?></h2>
         </div>
         <div class="main p-4">
-            <!-- <div id="progress">
-                <img src="img/under-construction.gif">
-            </div> -->
-            <div id="list-scored" class="p-3 shadow"></div>
+            
+            <!-- Tallies the Number of Scored Candidates -->
+            <div class="table-bg mb-3 shadow">
+            <h4 class="p-3 m-0 heading">Number of Scored Candidates</h4>
+                <div class="row">
+                    <div class="col">
+                        <div id="list-scored" class="p-2 shadow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top 5 Mr. UL Candidates -->
+            <div class="table-bg mb-3 shadow">
+                <h4 class="p-3 m-0 heading">Mr. UL Top 5 Candidates</h4>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-between">
+                    <div class="col">
+                        <div id="mrul-interview-top5" class="p-2"></div>
+                    </div>
+                    <div class="col">
+                        <div id="mrul-swimwear-top5" class="p-2"></div>
+                    </div>
+                    <div class="col">
+                        <div id="mrul-formal-top5" class="p-2"></div>
+                    </div>
+                    <div class="col">
+                        <div id="mrul-overall-top5" class="p-2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top 5 Ms. UL Candidates -->
+            <div class="table-bg shadow">
+                <h4 class="p-3 m-0 heading">Ms. UL Top 5 Candidates</h4>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-between">
+                    <div class="col">
+                        <div id="msul-interview-top5" class="p-2"></div>
+                    </div>
+                    <div class="col">
+                        <div id="msul-swimwear-top5" class="p-2"></div>
+                    </div>
+                    <div class="col">
+                        <div id="msul-formal-top5" class="p-2"></div>
+                    </div>
+                    <div class="col">
+                        <div id="msul-overall-top5" class="p-2"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
