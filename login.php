@@ -30,39 +30,47 @@
 </head>
 
 <body>
+    <div id="bg-image"></div>
     <div class="wrapper">
-        <div class="card">
-            <div class="card-header">
-                <h2><i class="fa-solid fa-right-to-bracket"></i> USER LOGIN</h2>
+        <div>
+            <div class="row mb-5">
+                <h1>UL Pageant Tabulation System</h1>
             </div>
-            <div class="card-body">
-                <form>
-                    <?php
-                    include("assets/scripts/conn.php");
-                    $sql = "SELECT id, judge_id, username FROM users";
-                    $result = $conn->query($sql);
-                    // Creates Select Menu with updated ID and Name from Users table in the DB
-                    echo '<div class="input-group mb-3">';
-                    echo '<div class="input-group-prepend">';
-                    echo '<label class="input-group-text" for="judge-select"><i class="fas fa-user"></i></label>';
-                    echo '</div>';
-                    echo '<select class="custom-select" id="judge-select">';
-                    echo '<option value="" selected>Select Judge</option>';
-                    while ($row = $result->fetch_assoc()) {
-                        echo '<option data-userId="'.$row['id'].'" data-judgeId="'.$row['judge_id'].'" value="'.$row['username'].'">'.$row['username'].'</option>';
-                    }
-                    echo '</select>';
-                    echo '</div>';
-                    $conn->close();
-                    ?>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text border-right-0" for="password"><i class="fa-solid fa-lock"></i></label>
-                        </div>
-                        <input type="password" class="form-control" id="password" placeholder="Enter Password" autocomplete="off">
+            <div class="row justify-content-center">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h2><i class="fa-solid fa-right-to-bracket"></i> USER LOGIN</h2>
                     </div>
-                    <input type="submit" class="btn btn-danger" id="login-btn" value="Log In" autocomplete="off">
-                </form>
+                    <div class="card-body">
+                        <form>
+                            <?php
+                            include("assets/scripts/conn.php");
+                            $sql = "SELECT id, judge_id, username FROM users";
+                            $result = $conn->query($sql);
+                            // Creates Select Menu with updated ID and Name from Users table in the DB
+                            echo '<div class="input-group mb-3">';
+                            echo '<div class="input-group-prepend">';
+                            echo '<label class="input-group-text" for="judge-select"><i class="fas fa-user"></i></label>';
+                            echo '</div>';
+                            echo '<select class="custom-select" id="judge-select">';
+                            echo '<option value="" selected>Select Judge</option>';
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<option data-userId="'.$row['id'].'" data-judgeId="'.$row['judge_id'].'" value="'.$row['username'].'">'.$row['username'].'</option>';
+                            }
+                            echo '</select>';
+                            echo '</div>';
+                            $conn->close();
+                            ?>
+                            <div class="input-group mb-4">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text border-right-0" for="password"><i class="fa-solid fa-lock"></i></label>
+                                </div>
+                                <input type="password" class="form-control" id="password" placeholder="Enter Password" autocomplete="off">
+                            </div>
+                            <input type="submit" class="btn btn-danger" id="login-btn" value="Log In" autocomplete="off">
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
