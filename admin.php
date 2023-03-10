@@ -31,9 +31,6 @@ if ($_SESSION['user']=="" || $_SESSION['user']['userid']!=1) {
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- jQuery Custom Scroller CDN -->
-    <script src="js/jquery.mCustomScrollbar.min.js"></script>
-
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/styles/style.css">

@@ -30,7 +30,6 @@
 </head>
 
 <body>
-    <!-- <div id="bg-image"></div> -->
     <div class="wrapper">
         <div class="card">
             <div class="card-header">
