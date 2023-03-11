@@ -21,7 +21,7 @@ $(document).ready(function(){
             success: function(res) {
 
                 var data = JSON.parse(res);
-                var temp = "<table class='table table-hover table-sm'>";
+                var temp = "<table class='table table-hover table-responsive-sm table-sm'>";
 
                 temp += "<tr><th class='align-middle text-center'>Cand. No.</th>" +
                             "<th class='align-middle'>Cand. Name</th>" +
@@ -109,16 +109,19 @@ $(document).ready(function(){
                 data: "candidate=" + candidate,
                 success: function(res) {
                     var data = JSON.parse(res);
-                    var temp = '<img id="contestant-image" src="assets\\img\\' + data[0].pic_path + '">';
-
-                    temp += '<ul class="list-group border-0">' +
-                                '<li class="list-group-item border-0">Candidate No: ' + data[0].no + '</li>' +
-                                '<li class="list-group-item border-0">' + data[0].name + '</li>' +
-                                '<li class="list-group-item border-0">' + data[0].course + '</li>' +
+                    var img = '<img id="cnddt-img" src="assets\\img\\' + data[0].pic_path + '">';
+                    
+                    var info = '<ul class="list-group">' +
+                                '<li class="list-group-item border-0 py-2">No: ' + data[0].no + '</li>' +
+                                '<li class="list-group-item border-0 py-2">' + data[0].name + '</li>' +
+                                '<li class="list-group-item border-0 py-2">' + data[0].course + '</li>' +
                             '</ul>';
 
-                    $("#preview").html(temp);
-                    $("#preview").fadeIn("fast");
+
+                    $("#cnddt-img-container").html(img);
+                    $("#cnddt-info").html(info);
+                    // $("#preview").html(temp);
+                    // $("#preview").fadeIn("fast");
                 }
             });
         }

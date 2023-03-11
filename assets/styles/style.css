@@ -4,6 +4,11 @@
     src: url("../font/Bohemian\ Soul.otf");
 }
 
+@font-face {
+    font-family: "Montena Golden";
+    src: url("../font/MotenaGolden-Reguler.ttf");
+}
+
 td > input {
     font-weight: bold;
 }
@@ -19,39 +24,45 @@ body {
     color: #300607;
 }
 
-.scores-view, .table-bg, #preview {
+.table-bg {
     background-color: #faf8ef;
     border: 2px solid #d8c59f;
 }
 
-#preview-container {
-    display: flex;
-    justify-content: center;
-    border-radius: 0.25rem;
+.list-group {
+    font-family: "Bohemian Soul";
+    font-size: 15px;
 }
 
-#preview {
-    width: 300px;
-    height: auto;
-    border-radius: 0.25rem;
-    position: fixed;
+#scores-container {
+    height: 542px;
+    overflow: auto;
 }
 
-#contestant-image {
+#cnddt-img-container {
+    height: 420px;
+}
+
+#cnddt-img {
+    height: 100%;
     width: 100%;
-    height: auto;
-    border-radius: 0.25rem;
+    object-fit: contain;
+}
+
+#cnddt-info {
+    height: 118px;
 }
 
 #judge-info {
     position: fixed;
-    bottom: 0;
-    right: 30px;
+    top: 0;
+    right: 12px;
     width: 250px;
     height: 30px;
+    font-family: "Bohemian Soul";
     text-align: center;
-    background: #faf8ef;
-    border-top: 2px solid #d8c59f;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    background: #ECE4CE;
+    border-bottom: 2px solid #300607;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }

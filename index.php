@@ -31,9 +31,6 @@ header("Pragma: no-cache");
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- jQuery Custom Scroller CDN -->
-    <script src="js/jquery.mCustomScrollbar.min.js"></script>
-    
 
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="assets/styles/style.css">
@@ -48,20 +45,20 @@ header("Pragma: no-cache");
     <div class="container-fluid px-0">
 
         <!-- Header -->
-        <div class="header text-center py-3">
+        <div class="header pl-3 py-3">
             <i class="fa-solid fa-crown fa-2x"></i>
             <h1>Mr. University of Luzon <?php echo date("Y")?></h1>
         </div>
 
         <!-- Main Content -->
-        <div class="main pt-2 px-3">
-            <div class="row">
+        <div class="main">
+            <div class="row p-2 m-0">
 
-                <div class="col-9">
-                    <div class="pt-2 rounded shadow scores-view">
+                <div class="col-12 col-md-9 p-1">
+                    <div class="table-bg" id="scores-container">
 
                         <!-- Search Bar -->
-                        <div class="container-fluid" id="searchbar">
+                        <div class="container-fluid mt-3" id="searchbar">
                             <div class="right-inner-addon">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -78,12 +75,13 @@ header("Pragma: no-cache");
                     </div>
                 </div>
 
-                <div class="col pl-0">
-                    <!-- Display Contestant Image -->
-                    <div id="preview-container">
-                        <div id="preview" class="shadow">
-                        </div>
+                <!-- Displays Candidate Information -->
+                <div class="col-12 col-md-3 p-1">
+                    <div class="table-bg">
+                        <div id="cnddt-img-container"></div>
+                        <div id="cnddt-info"></div>
                     </div>
+                    <!-- <div class="table-bg w-100 d-flex flex-column" id="preview"></div> -->
                 </div>
 
             </div>
@@ -91,7 +89,7 @@ header("Pragma: no-cache");
 
     </div>
     <!-- Current User -->
-    <div id="judge-info">
+    <div class="d-none d-md-block" id="judge-info">
         <?php echo "Judge: " . $_SESSION['user']['username'] ?>
     </div>
 </body>
