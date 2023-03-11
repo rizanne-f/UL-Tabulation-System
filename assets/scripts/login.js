@@ -6,11 +6,6 @@ $(document).ready(function () {
     var userId = $("option:selected").attr("data-userId");
     var judgeId = $("option:selected").attr("data-judgeId");
 
-    console.log(username);
-    console.log(password);
-    console.log(userId);
-    console.log(judgeId);
-
     if (username == "" || password == "") {
       alert("Incomplete Login Info!");
       return false;
@@ -19,7 +14,7 @@ $(document).ready(function () {
     // Verifies login info
     $.ajax({
       url: "assets/scripts/verifylogin.php",
-      type: "GET",
+      type: "POST",
       data: { username: username, password: password, userId: userId, judgeId: judgeId },
       success: function (res) {
         var response = JSON.parse(res);

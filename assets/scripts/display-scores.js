@@ -45,14 +45,14 @@ $(document).ready(function(){
 
                 }
 
-                temp += "<tr>" +
-                            "<td></td>" +
-                            "<td></td>" +
-                            "<td><input type='button' class='btn btn-sm btn-outline-dark w-100' value='Submit'></td>" +
-                            "<td><input type='hidden' class='btn btn-sm btn-outline-dark w-100' value='Submit'></td>" +
-                            "<td><input type='hidden' class='btn btn-sm btn-outline-dark w-100' value='Submit'></td>" +
-                            "<td></td>" +
-                        "</tr>";
+                // temp += "<tr>" +
+                //             "<td></td>" +
+                //             "<td></td>" +
+                //             "<td><input type='button' class='btn btn-sm btn-outline-dark w-100' value='Submit'></td>" +
+                //             "<td><input type='hidden' class='btn btn-sm btn-outline-dark w-100' value='Submit'></td>" +
+                //             "<td><input type='hidden' class='btn btn-sm btn-outline-dark w-100' value='Submit'></td>" +
+                //             "<td></td>" +
+                //         "</tr>";
 
                 temp += "</table>";
 

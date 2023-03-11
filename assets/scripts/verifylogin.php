@@ -4,10 +4,10 @@ error_reporting(0);
 
 include("conn.php");  
 
-$username = $_GET['username'];
-$password = $_GET['password'];
-$userid = $_GET['userId'];
-$judgeid = $_GET['judgeId'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$userid = $_POST['userId'];
+$judgeid = $_POST['judgeId'];
 
 $userArray = array(
   "username" => $username,
