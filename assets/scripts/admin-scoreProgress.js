@@ -121,7 +121,7 @@ $(document).ready(function() {
 
         // Get Top 5 Candidates Overall
         $.ajax({
-            url: 'assets/scripts/fetchFormalTop5.php',
+            url: 'assets/scripts/fetchOverallTop5.php',
             type: 'GET',
             success: function(res) {
                 var data = JSON.parse(res);
