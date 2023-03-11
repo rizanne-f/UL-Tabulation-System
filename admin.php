@@ -37,7 +37,7 @@ if ($_SESSION['user']=="" || $_SESSION['user']['userid']!=1) {
     <!-- jQuery External File -->
     <script src="assets/scripts/admin-scoreProgress.js"></script>
 
-    <title>UL Pageant</title>
+    <title>Admin Page</title>
 </head>
 
 <body>
