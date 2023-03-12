@@ -21,7 +21,7 @@ $(document).ready(function(){
             success: function(res) {
 
                 var data = JSON.parse(res);
-                var temp = "<table class='table table-hover table-responsive-sm table-sm'>";
+                var temp = "<table class='table table-hover table-responsive-sm table-sm m-0'>";
 
                 temp += "<tr><th class='align-middle text-center'>Cand. No.</th>" +
                             "<th class='align-middle'>Cand. Name</th>" +

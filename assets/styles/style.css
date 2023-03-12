@@ -1,4 +1,9 @@
 
+:root {
+    --accent-color: #131313;
+    --bg-color: #EEEEEE;
+}
+
 @font-face {
     font-family: "Bohemian Soul";
     src: url("../font/Bohemian\ Soul.otf");
@@ -11,32 +16,52 @@
 
 td > input {
     font-weight: bold;
+    background: var(--bg-color) !important;
 }
 
 body {
-    background: linear-gradient(90deg, #d8c59f 0%, #f3efde 100%);
+    /* background: linear-gradient(90deg, #d8c59f 0%, #f3efde 100%); */
+    background: var(--bg-color);
 }
 
 .header, .heading {
     font-family: 'Bohemian Soul';
-    background: linear-gradient(90deg, #cbad7e 0%, #e7d095 100%);
+    /* background: linear-gradient(90deg, #cbad7e 0%, #e7d095 100%);
     border-bottom: 2px solid #c6ab7e;
-    color: #300607;
+    color: #300607; */
+    background-color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    color: var(--bg-color);
 }
 
 .table-bg {
-    background-color: #faf8ef;
-    border: 2px solid #d8c59f;
+    /* background-color: #faf8ef;
+    border: 2px solid #d8c59f; */
+    background-color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    box-shadow: 5px 5px var(--accent-color);
 }
 
-.list-group {
+.search {
+    border-color: var(--accent-color);
+    /* box-shadow: 2px 2px var(--accent-color); */
+    background-color: var(--bg-color);
+}
+
+.list-group, .list-group > .list-group-item {
     font-family: "Bohemian Soul";
     font-size: 15px;
+    border-top: 1px solid var(--accent-color);
+    background-color: var(--bg-color);
 }
 
 #scores-container {
     height: 542px;
     overflow: auto;
+}
+
+#list-display {
+    border-top: 1px solid var(--accent-color);
 }
 
 #cnddt-img-container {
@@ -47,22 +72,36 @@ body {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    filter: grayscale(100%);
+   -webkit-filter: grayscale(100%);
 }
+
+#cnddt-img:hover {
+    -webkit-filter: none !important; 
+    filter: none !important;
+  }
 
 #cnddt-info {
     height: 118px;
 }
 
 #judge-info {
-    position: fixed;
-    top: 0;
-    right: 12px;
-    width: 250px;
-    height: 30px;
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    width: 300px;
+    height: 35px;
     font-family: "Bohemian Soul";
+    font-size: 20px;
     text-align: center;
-    background: #ECE4CE;
-    border-bottom: 2px solid #300607;
-    border-bottom-left-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
+    /* background: #ECE4CE;
+    border-bottom: 2px solid #300607; */
+    color: var(--accent-color);
+    background: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    box-shadow: 5px 5px var(--bg-color);
+    border-top: 0px;
+    box-sizing: border-box;
+    /* border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; */
 }

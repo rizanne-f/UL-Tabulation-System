@@ -49,17 +49,17 @@ header("Pragma: no-cache");
         <div class="main p-4">
             
             <!-- Tallies the Number of Scored Candidates -->
-            <div class="table-bg mb-3 shadow">
+            <div class="table-bg mb-3">
             <h4 class="p-3 m-0 heading">Number of Scored Candidates</h4>
                 <div class="row">
                     <div class="col">
-                        <div id="list-scored" class="p-2 shadow"></div>
+                        <div id="list-scored" class="p-2"></div>
                     </div>
                 </div>
             </div>
 
             <!-- Top 5 Mr. UL Candidates -->
-            <div class="table-bg mb-3 shadow">
+            <div class="table-bg mb-3">
                 <h4 class="p-3 m-0 heading">Mr. UL Top 5 Candidates</h4>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-between">
                     <div class="col">
@@ -78,7 +78,7 @@ header("Pragma: no-cache");
             </div>
 
             <!-- Top 5 Ms. UL Candidates -->
-            <div class="table-bg shadow">
+            <div class="table-bg">
                 <h4 class="p-3 m-0 heading">Ms. UL Top 5 Candidates</h4>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-between">
                     <div class="col">

@@ -48,35 +48,39 @@ header("Pragma: no-cache");
         <div class="header pl-3 py-3">
             <i class="fa-solid fa-crown fa-2x"></i>
             <h1>Mr. University of Luzon <?php echo date("Y")?></h1>
+            <!-- Current User -->
+            <div class="d-none d-lg-block" id="judge-info">
+                <?php echo "Judge: " . $_SESSION['user']['username'] ?>
+            </div>
         </div>
 
         <!-- Main Content -->
         <div class="main">
             <div class="row p-2 m-0">
 
-                <div class="col-12 col-md-9 p-1">
+                <div class="col-12 col-md-9 p-2">
                     <div class="table-bg" id="scores-container">
 
                         <!-- Search Bar -->
-                        <div class="container-fluid mt-3" id="searchbar">
+                        <div class="container-fluid my-3" id="searchbar">
                             <div class="right-inner-addon">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class='fas fa-search'></i></span>
+                                        <span class="input-group-text search"><i class='fas fa-search'></i></span>
                                     </div>
-                                    <input class="mr-2 form-control" type="text" placeholder="Search Candidate Name" id="text-content" size="40">
+                                    <input class="mr-2 form-control search" type="text" placeholder="Search Candidate Name" id="text-content" size="40">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Display Scores Table -->
-                        <div id="list-display" class="container-fluid text-left mt-3"></div>
+                        <div id="list-display" class="container-fluid py-2 text-left"></div>
 
                     </div>
                 </div>
 
                 <!-- Displays Candidate Information -->
-                <div class="col-12 col-md-3 p-1">
+                <div class="col-12 col-md-3 p-2">
                     <div class="table-bg">
                         <div id="cnddt-img-container"></div>
                         <div id="cnddt-info"></div>
@@ -87,10 +91,6 @@ header("Pragma: no-cache");
             </div>
         </div>
 
-    </div>
-    <!-- Current User -->
-    <div class="d-none d-md-block" id="judge-info">
-        <?php echo "Judge: " . $_SESSION['user']['username'] ?>
     </div>
 </body>
 
