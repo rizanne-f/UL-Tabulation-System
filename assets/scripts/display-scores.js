@@ -37,9 +37,9 @@ $(document).ready(function(){
                     temp += "<tr>";
                     temp += "<td class='text-center'>" + data[i].no + "</td>";
                     temp += "<td class='text-left'>" + data[i].name + "</td>";
-                    temp += "<td><input class='form-control form-control-sm' data-id='" + data[i].id + "' name='1' type='number' min='1' max='10' value='" + data[i].Interview + "'></td>";
-                    temp += "<td><input class='form-control form-control-sm' data-id='" + data[i].id + "' name='2' type='number' min='1' max='10' value='" + data[i].SwimWear + "'></td>";
-                    temp += "<td><input class='form-control form-control-sm' data-id='" + data[i].id + "' name='3' type='number' min='1' max='10' value='" + data[i].FormalWear + "'></td>";
+                    temp += "<td><input class='form-control form-control-sm' data-id='" + data[i].id + "' name='1' type='number' min='1' max='10' step='0.01' value='" + data[i].Interview + "'></td>";
+                    temp += "<td><input class='form-control form-control-sm' data-id='" + data[i].id + "' name='2' type='number' min='1' max='10' step='0.01' value='" + data[i].SwimWear + "'></td>";
+                    temp += "<td><input class='form-control form-control-sm' data-id='" + data[i].id + "' name='3' type='number' min='1' max='10' step='0.01' value='" + data[i].FormalWear + "'></td>";
                     temp += "<td class='text-center'>" + data[i].AveScore + "</td>";
                     temp += "</tr>";
 
