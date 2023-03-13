@@ -45,12 +45,12 @@ header("Pragma: no-cache");
     <div class="container-fluid px-0">
 
         <!-- Header -->
-        <div class="header pl-3 py-3">
+        <div class="header pl-3 py-2">
             <i class="fa-solid fa-crown fa-2x"></i>
             <h1>Mr. University of Luzon <?php echo date("Y")?></h1>
             <!-- Current User -->
             <div class="d-none d-lg-block" id="judge-info">
-                <?php echo "Judge: " . $_SESSION['user']['username'] ?>
+                <?php echo "Judge " . $_SESSION['user']['judgeid'] .": " . $_SESSION['user']['username'] ?>
             </div>
         </div>
 
@@ -64,7 +64,7 @@ header("Pragma: no-cache");
                         <!-- Search Bar -->
                         <div class="container-fluid my-3" id="searchbar">
                             <div class="right-inner-addon">
-                                <div class="input-group">
+                                <div class="input-group input-group-sm">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text search"><i class='fas fa-search'></i></span>
                                     </div>
